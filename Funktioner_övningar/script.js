@@ -14,7 +14,7 @@ function tilldelning(v) {
 
   v = "Volvo";
 
-  showResult2(typeof v + "Volvoooooo");
+  showResult2(typeof v + "Volv");
 
 }
 

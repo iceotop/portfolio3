@@ -1,38 +1,60 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
 body {
     display: flex;
     flex-direction: column; /* the white surface*/
+    margin-top: 10em;
+    background-image: url(/../ImagesUsed/little-nemo.jpg);
+    background-size: auto;
+    background-position: center;
 }
 
 
 .main-header {
-    background-color: blueviolet;
+    background-color: rgba(255, 254, 254, 0.7);
     text-align: center;
-    border-bottom: 3px solid black;
+    padding: 2em;
+    border-top: 5px double rgb(224, 95, 95);
+    border-bottom: 5px double rgb(224, 95, 95);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: lighter;
+    font-style: italic;
+    color:rgba(220, 20, 60, 0.884)
 }
 
 .contents-layout {
     display: flex;
-    background-color: rgb(255, 166, 0);
     justify-content: center; /* controls its child, main-article*/
 }
 
-.main-article {
-    background-color: rgba(255, 161, 247, 0.993);
-    border: 4px solid black;
+.main-article { /*Titel på uppgifterna*/
+    height: 1000px;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5em;
 }
 
-#item-1 {
- background-color: red;
+h3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgba(220, 20, 60, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 20px;
+    padding: 0.5em;
 }
 
-#item-2 {
-    background-color: blue;
-}
-
-#item-3 {
-    background-color: yellow;
-}
-
-#item-4 {
-    background-color: green;
+div { /*Text: länk och datum*/
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em 0em;
+    padding: 1em;
+    background-color:rgba(236, 199, 142, 0.8);
+    border-radius: 25px;
+    font-weight: bold;
 }

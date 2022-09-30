@@ -5,13 +5,12 @@
 
 body {
     display: flex;
-    flex-direction: column; /* the white surface*/
+    flex-direction: column; /* <---- För main-header & main-contents att ligga på varandra*/
     margin-top: 10em;
     background-image: url(/../ImagesUsed/little-nemo.jpg);
     background-size: auto;
     background-position: center;
 }
-
 
 .main-header {
     background-color: rgba(255, 254, 254, 0.7);
@@ -19,6 +18,7 @@ body {
     padding: 2em;
     border-top: 5px double rgb(224, 95, 95);
     border-bottom: 5px double rgb(224, 95, 95);
+
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     font-weight: lighter;
@@ -26,34 +26,31 @@ body {
     color:rgba(220, 20, 60, 0.884)
 }
 
-.contents-layout {
-    display: flex;
-    justify-content: center; /* controls its child, main-article*/
-}
-
-.main-article { /*Titel på uppgifterna*/
+.main-article { /* <---- Containern för innehållet under "Projekt"-headern. */
     height: 1000px;
     width: 100%;
-    text-align: center;
     padding-top: 0.5em;
+    text-align: center;
 }
 
-h3 {
+h3 { /* <---- De röda underrubrikernas utseende. */
     background-color: rgba(255, 255, 255, 0.8);
     color: rgba(220, 20, 60, 0.9);
+    padding: 0.5em;
+
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: lighter;
     font-style: italic;
     font-size: 20px;
-    padding: 0.5em;
 }
 
-div { /*Text: länk och datum*/
+div { /*Text i de gula spalterna: länk och datum*/
     display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row; /* <---- "flex" och sedan "row" för att få länkarna och paragraferna på samma rad. "inline"-delen gör så att elementen bara tar upp den rum som innehållet (texten) kräver. */
+
     margin: 1em 0em;
     padding: 1em;
+    
     background-color:rgba(236, 199, 142, 0.8);
     border-radius: 25px;
     font-weight: bold;

@@ -16,21 +16,26 @@ body {
     margin: 300px 0px;
 }
 
+/* ^^^ Ovanför: layout:en. ^^^ */
+
+/* vvv Nedanför: knapparna vvv */
+
 #centerspread ul li {
-    display: inline-block;
+    display: inline-block; /* <---- Får li-elementen (som är block-element) på samma rad. Hade jag skrivit "display: block" så hade inget hänt eftersom li-elementen redan är det. Hade jag skrivit "display:inline" så hade li-elementen hamnat på separata rader ändå eftersom deras block-property tar upp hela bredden på en rad. "display: inline-block" gör så att de två block-elementen (som annars, by default, tar upp en hel rad) ändrar storlek för att få plats bredvid varandra. */
     list-style-type: none;
 }
 
 #centerspread ul li a {
+    display: block; /* <---- Anchors är inline-element och kan därför komma att stängas in på elementets innehåll trots din padding/margin/width, så vi omvandlar den till att fungera som ett block-element. */
+    background-color: rgba(236, 199, 142, 0.8);
     text-decoration: none;
     color: ivory;
-    display: inline-block;
+
     padding: 20px;
     border: 1px solid black;
     width: 300px;
     margin: 20px 80px;
-    box-sizing: border-box;
-    background-color: rgba(236, 199, 142, 0.8);
+
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     font-weight:lighter;
@@ -38,10 +43,6 @@ body {
 }
 
 #centerspread ul li a:hover {
-    background-color: rgba(222, 184, 135, 0.5);
+    background-color: rgba(222, 184, 135, 0.5); /* <---- Färg ändras när muspekaren rör sig över knapparna*/
     color: bisque;
-}
-
-@media(max-width:600px){
-    /*for phones*/
 }

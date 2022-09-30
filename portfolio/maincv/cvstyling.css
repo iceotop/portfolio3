@@ -1,0 +1,115 @@
+body {
+    background-image: url(/../ImagesUsed/corto-maltese.png);
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+
+    background-image: url(/../ImagesUsed/rouen_cathedral.jpg);
+    background-position: bottom right;
+    background-size: cover;
+    width: 45%;
+    min-width: 620px;
+    margin: auto;
+}
+
+.column-1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.5);
+    background-color:rgba(117, 195, 210, 0.9);
+    width: 35%;
+}
+
+.column-2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:lighter;
+    font-style: italic;
+    width: 50%;
+    margin: 6em 0;
+}
+/* ^^^ Allting ovanför har att göra med de större elementen och deras lägen på hemsidan. ^^^ */
+
+/* v v v Allting nedanför har att göra med hur innehållet (främst texten) ser ut på layout:en. v v v */
+#namn {
+    color: white;
+    margin: 0.5em 0em 0em 1rem;
+    font-weight: 500;
+}
+
+#titel {
+    color: white;
+    margin: 0em 0em 1em 1rem;
+}
+
+img {
+    width: 100%;
+}
+
+.personuppgifter {
+    margin-top: 1.5em;
+}
+
+.h2-column-1 {
+    margin: 0 0.5rem;
+    padding: 0 0 0.3em 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.h4-column-1 {
+    margin: 1em 0 0 0;
+}
+
+.p-column-1 {
+    margin: 0 0 1em 0;
+}
+
+ul {
+    color: rgb(255, 255, 255);
+    font-weight: 350;
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+.hobbys li, .färdigheter li{
+    font-weight: 450;
+}
+
+i {
+
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0.5em;
+}
+
+.fa-square {
+    padding: 0.5em 1em 1em 0em;
+}
+
+/* ^^^ Ovanför: Kolumn 1 på vänster sida (med bilden och listorna). ^^^ */
+
+/* vvv Nedanför: Kolumn 2 på vänster sida (med all brödtext). vvv */
+
+.items-2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 1em;
+    margin: 0.5em 0;
+}
+
+
+/* vvv Media query: när viewportens width blir lika med eller mindre än 1330px så blir bakgrundsbilden fixed i hörnet (i stället för att försvinna bakom cv:et. vvv */
+@media (max-width: 1330px) {
+    
+    body {
+        background-image: url(/../ImagesUsed/corto-maltese.png);
+        background-position: bottom right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
